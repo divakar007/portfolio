@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-container {
-  position: relative;
+  position: absolute;
   z-index: 2;
   min-width: 300px;
 }
@@ -352,10 +352,44 @@ section {
 .profile-image{
   border-radius: 10px;
 }
+
 .portfolio-image{
   border-radius: 10px;
   height: 300px;
-  width: 400px;
+  width: 420px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the popup container */
+.popup-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
+  z-index: -1;
+}
+
+/* Style for the close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 
@@ -447,6 +481,14 @@ section {
   background-color: #149ddd;
 }
 
+.skills-icons{
+  font-size: 85px;
+}
+
+.skills-heading{
+  color: #000000;
+  background-color: #9bd4e4;
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -681,6 +723,9 @@ section {
   padding: 0;
 }
 
+#overlay{
+  z-index: 100;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -1087,6 +1132,6 @@ section {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding-right: 20px;
   }
 }
